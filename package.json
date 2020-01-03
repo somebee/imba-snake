@@ -12,8 +12,8 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --mode=development --content-base dist/",
-    "build": "webpack --mode=production",
-    "watch": "webpack --watch --progress --colors --display-modules",
+    "build": "imbac --standalone -o dist/ src/",
+    "watch": "imbac --standalone -w -o dist/ src/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -23,19 +23,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "css-loader": "^1.0.1",
-    "express": "^4.16.2",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "imba": "1.5.2",
-    "normalize-scss": "^7.0.1",
-    "style-loader": "^0.23.1",
+    "imba": "^2.0.0-alpha.12",
     "webpack-dev-server": "^3.7.1"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "webpack": "^4.26.0",
-    "webpack-cli": "^3.1.2"
   }
 }
